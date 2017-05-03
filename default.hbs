@@ -35,11 +35,13 @@
 				<meta property="og:url" content="{{url absolute='true'}}" />
 				<meta property="og:title" content="{{title}}" />
 				<meta property="og:description" content="{{excerpt}}" />
+				{{#if image}}<meta property="og:image" content="{{@blog.url}}{{image}}"/>{{/if}}
 
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="{{title}}" />
 				<meta name="twitter:description" content="{{excerpt}}" />
 				<meta name="twitter:creator" content="@petewailes" />
+				{{#if image}}<meta name="twitter:image:src" content="{{@blog.url}}{{image}}">{{/if}}
 			{{/post}}
 		{{else}}
 			{{#if author}}
@@ -50,14 +52,12 @@
 					<meta property="og:url" content="{{url absolute='true'}}" />
 					<meta property="og:title" content="{{name}} - {{@blog.title}}" />
 					<meta property="og:description" content="{{bio}}" />
-					<meta property="og:image" content="{{@blog.url}}{{image}}" />
 				{{/author}}
 			{{else}}
 				<meta property="og:type" content="website">
 				<meta property="og:url" content="{{@blog.url}}" />
 				<meta property="og:title" content="{{@blog.title}}" />
 				<meta property="og:description" content="{{@blog.description}}" />
-				<meta property="og:image" content="{{@blog.url}}{{asset 'images/facebook-opengraph.png'}}" />
 			{{/if}}
 		{{/if}}
 
