@@ -2,7 +2,14 @@
 <article class="row {{post_class}}" role="main">
 	{{#post}}
 	<header>
-		<h1>{{{title}}}</h1>
+		{{#if image}}
+		<div id="featured-image">
+			<img src="{{image}}">
+			<h1>{{title}}</h1>
+		</div>
+		{{else}}
+		<h1>{{title}}</h1>
+		{{/if}}
 		{{#if author}}
 		<p>Post by {{author.name}}</p>
 		{{/if}}
@@ -59,23 +66,19 @@
 		</a>
 	</section>
 	{{/post}}
+	<aside class="read-next">
+		{{#next_post}}
+			<section class="post">
+				<h4>Next Story</h4>
+				<h5><a class="read-next-story" href="{{url}}">{{title}}</a></h5>
+			</section>
+		{{/next_post}}
+		{{#prev_post}}
+			<section class="post">
+				<h4>Previous Story</h4>
+				<h5><a class="read-next-story prev" href="{{url}}">{{title}}</a></h5>
+			</section>
+		{{/prev_post}}
+	</aside>
 </article>
-<aside class="read-next">
-	{{#next_post}}
-	<a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-		<section class="post">
-			<h2>{{title}}</h2>
-			<p>{{excerpt words="19"}}&hellip;</p>
-		</section>
-	</a>
-	{{/next_post}}
-	{{#prev_post}}
-	<a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-		<section class="post">
-			<h2>{{title}}</h2>
-			<p>{{excerpt words="19"}}&hellip;</p>
-		</section>
-	</a>
-	{{/prev_post}}
-</aside>
 <script>hljs.initHighlightingOnLoad();</script>

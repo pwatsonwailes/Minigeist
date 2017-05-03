@@ -64,11 +64,10 @@
 		{{ghost_head}}
 	</head>
 	<body class="{{body_class}}">
-		{{#if @blog.navigation}}
-			{{navigation}}
-		{{/if}}
-
 		<header class="row">
+			{{#if @blog.navigation}}
+				{{navigation}}
+			{{/if}}
 			<h1><a href="{{@blog.url}}"  alt="Blog Title">{{@blog.title}}</a></h1>
 			<p class="blog-description">{{@blog.description}}</p>
 		</header>
@@ -76,7 +75,7 @@
 		{{{body}}}
 
 		<footer class="row">
-			<p>Theme by <a href="https://wail.es">Pete Wailes</a>. Published with <a class="icon-ghost" href="http://ghost.org">Ghost</a>.</p>
+			<p>Theme by <a href="https://wail.es">Pete Watson-Wailes</a>. Published with <a class="icon-ghost" href="http://ghost.org">Ghost</a>.</p>
 		</footer>
 
 		{{ghost_foot}}
