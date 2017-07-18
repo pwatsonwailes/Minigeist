@@ -35,13 +35,13 @@
 				<meta property="og:url" content="{{url absolute='true'}}" />
 				<meta property="og:title" content="{{title}}" />
 				<meta property="og:description" content="{{excerpt}}" />
-				{{#if image}}<meta property="og:image" content="{{@blog.url}}{{image}}"/>{{/if}}
+				{{#if feature_image}}<meta property="og:image" content="{{@blog.url}}{{feature_image}}"/>{{/if}}
 
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="{{title}}" />
 				<meta name="twitter:description" content="{{excerpt}}" />
 				<meta name="twitter:creator" content="@petewailes" />
-				{{#if image}}<meta name="twitter:image:src" content="{{@blog.url}}{{image}}">{{/if}}
+				{{#if feature_image}}<meta name="twitter:image:src" content="{{@blog.url}}{{feature_image}}">{{/if}}
 			{{/post}}
 		{{else}}
 			{{#if author}}
