@@ -1,6 +1,6 @@
 # Minigeist
 
-Minigeist is a minimalist [Ghost](http://www.ghost.org) theme built to use the least CSS possible and still have something responsive and beautiful.
+Minigeist is a minimalist [Ghost](http://www.ghost.org) theme built to use the least CSS possible and still have something responsive and beautiful. T&C runs a lightly extended version of it, so here's a [demo](https://toughcompetent.com/) of something similar to it.
 
 ## Features
 
